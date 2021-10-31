@@ -5,12 +5,11 @@ import { Link } from 'react-router-dom';
 const UiOrder = ({ myOrder }) => {
     const { name, img, price, place, _id } = myOrder;
 
-    // handleDelete------------------------------delete order
     const handleDelete = id => {
         const process = window.confirm('Are you sure ,You want to remove');
 
         if (process) {
-            const url = `http://localhost:7000/order/${id}`;
+            const url = `https://haunted-scarecrow-80028.herokuapp.com/order/${id}`;
             fetch(url, {
                 method: 'DELETE'
             })

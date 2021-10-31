@@ -9,7 +9,7 @@ const MyOrder = () => {
     const [order, setOrder] = useState([]);
     
     useEffect(() => {
-        const url = 'http://localhost:7000/order';
+        const url = 'https://haunted-scarecrow-80028.herokuapp.com/order';
 
         fetch(url)
             .then(res => res.json())

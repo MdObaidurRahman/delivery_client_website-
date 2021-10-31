@@ -8,13 +8,13 @@ const ManageService = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        fetch('http://localhost:7000/Services/')
+        fetch('https://haunted-scarecrow-80028.herokuapp.com/Services/')
             .then(res => res.json())
             .then(data => setServices(data))
     }, [])
 
     const handleDelete = id => {
-        const url = `http://localhost:7000/Services/${id}`;
+        const url = `https://haunted-scarecrow-80028.herokuapp.com/Services/${id}`;
         fetch(url, {
             method: 'DELETE'
         })
